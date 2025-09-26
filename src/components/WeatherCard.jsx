@@ -14,14 +14,9 @@ const WeatherCard = ({ weather }) => {
     >
       <Card sx={{ minWidth: 300, backgroundColor: "rgba(255, 255, 255, 0.85)" }}>
         <CardContent>
-          <Typography variant="h5">
-            {weather.name}, {weather.sys.country}
-          </Typography>
+          <Typography variant="h5">{weather.name}, {weather.sys.country}</Typography>
           <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
-            <img
-              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-              alt={weather.weather[0].description}
-            />
+            <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
             <Typography variant="h4">{Math.round(weather.main.temp)}°C</Typography>
           </Box>
           <Typography>{weather.weather[0].description}</Typography>
