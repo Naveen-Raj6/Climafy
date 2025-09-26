@@ -19,7 +19,7 @@ const WeatherMap = ({ coords, forecastCities }) => {
 
     const map = L.map(mapRef.current, {
       center: [coords.lat, coords.lon],
-      zoom: 10,
+      zoom: 15,
       zoomControl: true,
     });
 
